@@ -292,7 +292,7 @@ contactForm.addEventListener('submit', async (e) => {
 
   const data = new FormData(contactForm);
 
-  const res = await fetch('https://formspree.io/f/xyzabcde', {
+  const res = await fetch('', {
     method: 'POST',
     body: data,
     headers: { 'Accept': 'application/json' }

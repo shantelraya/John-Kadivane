@@ -218,7 +218,7 @@
       object-fit: cover;
       background: #1e1e1c;
     }
-    /* placeholder when no image */
+    
     .hover-photo img[src=""],
     .hover-photo img:not([src]) {
       background: repeating-linear-gradient(
