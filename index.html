@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Fira+Code:wght@300;400;500&family=Exo+2:ital,wght@0,100;0,300;0,900;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/result.css">
 </head>
 <body>
 
@@ -77,12 +78,12 @@
       <div class="about-left">
         <div class="about-photo-frame">
           <div class="about-photo-placeholder">
-            <img src="/photos/DSC_0040.jpg" alt="john kadivane" class="driver-img">
+            <img src="/photos/profile.jpeg" alt="john kadivane" class="driver-img">
           </div>
           <div class="frame-corner tl"></div>
           <div class="frame-corner br"></div>
         </div>
-        <div class="about-number-bg">17</div>
+        <div class="about-number-bg">20</div>
       </div>
       <div class="about-right">
         <div class="section-label" data-index="02">Driver Profile</div>
@@ -118,155 +119,265 @@
     </div>
   </section>
 
-  <!-- RACES -->
-  <section id="races" class="races-section">
-    <div class="section-label reveal" data-index="03">Race History</div>
-    <div class="timeline">
+<!--RACE RESULTS-->
+<section id="races" class="results-section">
 
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2022</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">KENYA NATIONAL AUTOCROSS RALLY CHAMPIONSHIP</div>
-            <div class="race-detail">Nairobi · Jan - Dec · gravel</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p1">02</div>
-            <div class="result-label">Position</div>
-          </div>
-        </div>
-      </div>
+  <!-- Floating hover photo -->
+  <div class="hover-photo" id="hoverPhoto">
+    <img src="" alt="" id="hoverImg"/>
+    <div class="hover-photo__label" id="hoverLabel"></div>
+  </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2023</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">KENYA NATIONAL AUTOCROSS RALLY CHAMPIONSHIP</div>
-            <div class="race-detail">Nairobi · Jan - Dec · Gravel</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p1">1</div>
-            <div class="result-label">win</div>
-          </div>
-        </div>
-      </div>
+  <!-- Eyebrow label -->
+  <div class="results-eyebrow">Race Results</div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2023</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">Betika RallyCross</div>
-            <div class="race-detail">Nairobi & Machakos · May & Nov · Gravel / Dust</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p2">4</div>
-            <div class="result-label">Podiums</div>
-          </div>
-        </div>
-      </div>
+  <!-- Column headers -->
+  <div class="results-header">
+    <span>Series</span>
+    <span>Name</span>
+    <span>When</span>
+    <span style="text-align:right">Result</span>
+  </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2024</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">AUTOCROSS</div>
-            <div class="race-detail">Nairobi · Jan - Nov· dust</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p1">3</div>
-            <div class="result-label">wins</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2024</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">Betika RallyCross</div>
-            <div class="race-detail">Kasarani  · Apr & NOv · Gravel / Dust</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p2">7</div>
-            <div class="result-label">Podiums</div>
-          </div>
-        </div>
-      </div>
+  <!-- Rows -->
+  <div class="results-table" id="resultsTable">
 
-      <div class="timeline-item reveal">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-line"></div>
-        <div class="timeline-body">
-          <div>
-            <div class="race-name">AUTOCROSS</div>
-            <div class="race-detail">Kiambu · Jan - Feb · Gravel</div>
-          </div>
-          <div class="race-result">
-            <div class="result-pos p1">2</div>
-            <div class="result-label">Podiums</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="section-label reveal" data-index="04">Gallery</div>
-  <div class="gallery-grid reveal">
-
-    <div class="gallery-item">
-      <img src="/photos/hero shot.png" alt="WRC Safari Rally Kenya 2024" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">WRC - Safari Rally Kenya - 2024</span></div>
+    <div class="result-row"
+         data-photo="photos/kasarani 2022.jpeg"
+         data-label="Kasarani Grounds · 2022">
+      <span class="col-series">Auto-X</span>
+      <span class="col-name">KENYA NATIONAL AUTOCROSS RALLY CHAMPIONSHIP</span>
+      <span class="col-when">Jan – Dec 2022</span>
+      <span class="col-finish">
+        <span class="finish-pos p2">2<sup>nd</sup></span>
+      </span>
+      <span class="col-time">OVERRAL</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="/photos/action.jpg" alt="Betika RallyCross" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">Betika RallyCross</span></div>
+    <div class="result-row featured"
+         data-photo="photos/2023.jpeg"
+         data-label="Nairobi · 2023">
+      <span class="col-series">Auto-X</span>
+      <span class="col-name">KENYA NATIONAL AUTOCROSS RALLY CHAMPIONSHIP</span>
+      <span class="col-when">Jan – Dec 2023</span>
+      <span class="col-finish">
+        <span class="finish-pos p1">1<sup>st</sup></span>
+      </span>
+      <span class="col-time">CHAMPION</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="/photos/cockpit.png" alt="Cockpit" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">Cockpit</span></div>
+    <div class="result-row"
+         data-photo="photos/betikaa 2023-1.jpeg"
+         data-label="Nairobi & Machakos · 2023">
+      <span class="col-series">RX</span>
+      <span class="col-name">BETIKA RALLYCROSS</span>
+      <span class="col-when">May &amp; Nov 2023</span>
+      <span class="col-finish">
+        <span class="finish-pos p2">4</span>
+      </span>
+      <span class="col-time">PODIUMS</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="/photos/dust.jpeg" alt="AutoCross Stoni Athi" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">254 Motorsport Autocross - Stoni Athi</span></div>
+    <div class="result-row"
+         data-photo="photos/twisty coners.jpeg"
+         data-label="Nairobi · 2024">
+      <span class="col-series">Auto-x</span>
+      <span class="col-name">Kenya National Autocross Rally Championship</span>
+      <span class="col-when">Jan – Nov 2024</span>
+      <span class="col-finish">
+        <span class="finish-pos p1">3</span>
+      </span>
+      <span class="col-time">WINS</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="/photos/ishowspeed.jpeg" alt="Ishowspeed Africa Tour" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">Ishowspeed Africa Tour</span></div>
+    <div class="result-row"
+         data-photo="photos/podium.jpg"
+         data-label="Kasarani · 2024">
+      <span class="col-series">RX</span>
+      <span class="col-name">BETIKA RALLYCROSS</span>
+      <span class="col-when">Apr &amp; Nov 2024</span>
+      <span class="col-finish">
+        <span class="finish-pos p2">7</span>
+      </span>
+      <span class="col-time">PODIUMS</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="/photos/podium.jpg" alt="Betika RallyCross 2024" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">Betika RallyCross 2024</span></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="/photos/community.jpeg" alt="Community" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">Community</span></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="/photos/Documentary.png" alt="10 Toes Down Documentary" class="gallery-img">
-      <div class="gallery-overlay"><span class="gallery-caption">
-        <a href="https://youtu.be/WgcVY4zUats?si=6rbg31vhnVKycU0D">
-           10 Toes Down - Documentary</span>
-          </div>
-        </a>
-      
+    <div class="result-row"
+         data-photo="photos/dust.jpeg"
+         data-label="Kiambu · 2025">
+      <span class="col-series">Auto-X</span>
+      <span class="col-name">254 Autorcross</span>
+      <span class="col-when">Jan – Feb 2025</span>
+      <span class="col-finish">
+        <span class="finish-pos p1">2</span>
+      </span>
+      <span class="col-time">PODIUMS</span>
     </div>
 
   </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section is-dark" id="gallery">
+
+  <div class="gallery-bg" id="galleryBg"></div>
+  <div class="gallery-blob" id="galleryBlob"></div>
+
+  <svg class="squiggle" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="sq-1" d="M-200,350 C50,150 200,550 450,300 C700,50 800,480 1050,260 C1300,40 1380,420 1640,200"/>
+    <path class="sq-2" d="M-100,550 C200,350 350,650 600,420 C850,190 950,560 1200,340 C1450,120 1500,480 1700,300"/>
+    <path class="sq-3" d="M100,150 C300,350 220,520 480,400 C740,280 680,560 920,460 C1160,360 1100,180 1360,280"/>
+  </svg>
+
+  <div class="gallery-track" id="galleryTrack">
+
+    <!-- ══ PANEL 1 ══ -->
+    <div class="gallery-panel" data-bg="#e4dfd3" data-text="dark">
+
+      <div class="photo-item" style="left:52%;top:8%;width:36%;z-index:2;transform:rotate(0deg)">
+        <span class="photo-label">WRC, 2024</span>
+        <div class="photo-frame">
+          <img src="photos/wrc-2024.jpeg" alt="2024 WRC-Safari Rally-Kenya"/>
+        </div>
+      </div>
+
+      
+      <div class="photo-item" style="left:18%;top:10%;width:20%;z-index:1;transform:rotate(-2deg)">
+        <span class="photo-label">Kasarani, 2022</span>
+        <div class="photo-frame photo-frame--mono">
+          <img src="photos/kasarani 2022.jpeg" alt="2022"/>
+        </div>
+      </div>
+
+      
+      <div class="photo-item" style="left:6%;top:50%;width:22%;z-index:1;transform:rotate(1.5deg)">
+        <span class="photo-label">Stoni Athi</span>
+        <div class="photo-frame">
+          <img src="photos/dust.jpeg" alt="Autocross"/>
+        </div>
+      </div>
+
+      <div class="panel-quote dark">
+        <p>It doesn't matter <strong>where</strong> you start,<br/>it's <strong>how</strong> you progress.</p>
+        <div class="panel-sig">— JK</div>
+      </div>
+    </div>
+
+    <!-- ══ PANEL 2 ══ -->
+    <div class="gallery-panel" data-bg="#FBCEB1" data-text="light">
+
+      <div class="photo-item" style="left:42%;top:6%;width:22%;z-index:1;transform:rotate(1deg)">
+        <span class="photo-label">Machakos, 2023</span>
+        <div class="photo-frame photo-frame--mono">
+          <img src="photos/betika 2023.jpeg" alt="Betika 2023"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:2%;top:25%;width:38%;z-index:2;transform:rotate(0deg)">
+        <span class="photo-label">Kasarani, 2024</span>
+        <div class="photo-frame">
+          <img src="photos/podium.jpg" alt="Betika 2023"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:60%;top:40%;width:28%;z-index:1;transform:rotate(-1.5deg)">
+        <span class="photo-label">kasarani, 2024</span>
+        <div class="photo-frame photo-frame--mono">
+          <img src="photos/action.jpg" alt="Rallycross"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:76%;top:6%;width:19%;z-index:1;transform:rotate(2deg)">
+        <span class="photo-label">Kasarani, 2024</span>
+        <div class="photo-frame photo-frame--mono">
+          <img src="photos/rx 2024.jpeg" alt="Rally Cross"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PANEL 3 ══ -->
+    <div class="gallery-panel" data-bg="#8b0000" data-text="light">
+
+      <div class="photo-item" style="left:30%;top:6%;width:22%;z-index:1;transform:rotate(-1deg)">
+        <span class="photo-label">WRC, 2025</span>
+        <div class="photo-frame">
+          <img src="photos/hero shot (2).png" alt="wrc"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:58%;top:28%;width:36%;z-index:2;transform:rotate(0deg)">
+        <span class="photo-label">Stoni Athi, 2025</span>
+        <div class="photo-frame">
+          <img src="photos/cockpit.png" alt="254 Auto-x"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:5%;top:30%;width:28%;z-index:1;transform:rotate(1.5deg)">
+        <span class="photo-label">10 Toes Down - Documentary, 2025</span>
+        <div class="photo-frame photo-frame--mono">
+          <a href="https://youtu.be/WgcVY4zUats?si=G6QdC6rgpOg0yWBF">
+            <img src="photos/Documentary.png" alt="Documentary"/>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="panel-quote light">
+        <p>Built on <strong>dust</strong>,<br/>driven by <strong>fire.</strong></p>
+        <div class="panel-sig">— JK</div>
+      </div>
+    </div>
+
+    <!-- ══ PANEL 4 ══ -->
+    <div class="gallery-panel" data-bg="#0e0e0d" data-text="light">
+
+      <div class="photo-item" style="left:5%;top:10%;width:36%;z-index:2;transform:rotate(-0.5deg)">
+        <span class="photo-label">community</span>
+        <div class="photo-frame">
+          <img src="photos/community.jpeg" alt="2025"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:54%;top:6%;width:24%;z-index:1;transform:rotate(2deg)">
+        <span class="photo-label">Kasarani, 2024</span>
+        <div class="photo-frame">
+          <img src="photos/kasarani 2024.jpeg" alt="Autocross"/>
+        </div>
+      </div>
+
+      <div class="photo-item" style="left:50%;top:48%;width:34%;z-index:1;transform:rotate(-1deg)">
+        <span class="photo-label">Highlights</span>
+        <div class="photo-frame photo-frame--mono">
+          <img src="photos/hero shot.png" alt="Highlights"/>
+        </div>
+      </div>
+
+      <div class="panel-end">
+        <p>More<br/><em>to come.</em></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="gallery-ui">
+    <div class="gallery-dots" id="galleryDots">
+      <button class="dot active" data-panel="0"></button>
+      <button class="dot" data-panel="1"></button>
+      <button class="dot" data-panel="2"></button>
+      <button class="dot" data-panel="3"></button>
+    </div>
+    <div class="drag-hint">
+      <svg viewBox="0 0 48 12"><path d="M0 6h44M38 1l6 5-6 5"/></svg>
+      <span>Drag to explore</span>
+    </div>
+    <div class="panel-counter">
+      <span id="panelCurrent">01</span>
+      <span style="opacity:0.4">/</span>
+      <span>04</span>
+    </div>
+
+  </div>
+
 </section>
 
   <!-- CONTACT -->
@@ -278,21 +389,23 @@
     </div>
 
     <div class="contact-right reveal">
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <input type="text" id="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" placeholder="Email Address" required />
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" placeholder="Subject — Sponsorship / Media / Other" />
-        </div>
-        <div class="form-group">
-          <textarea id="message" placeholder="Tell me about your project..."></textarea>
-        </div>
-          <button type="submit" class="btn-send"><span id="btnText">SEND IT →</span></button>
-      </form>
+  <form class="contact-form" id="contactForm" 
+      action="https://formspree.io/f/xyzabcde" 
+      method="POST">
+    <div class="form-group">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Email Address" required />
+    </div>
+    <div class="form-group">
+      <input type="text" id="subject" name="subject" placeholder="Subject — Sponsorship / Media / Other" />
+    </div>
+    <div class="form-group">
+      <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+    </div>
+  <button type="submit" class="btn-send"><span id="btnText">SEND IT →</span></button>
+</form>
     </div>
   </section>
 
@@ -309,5 +422,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="result.js"></script>
 </body>
 </html>
